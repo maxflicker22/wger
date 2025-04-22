@@ -80,3 +80,8 @@ RUN pip3 install --break-system-packages --user -e . \
     && mkdir ~/db
 
 CMD ["/home/wger/entrypoint.sh"]
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+

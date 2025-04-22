@@ -88,6 +88,15 @@ fi
 # Set the site URL
 python3 manage.py set-site-url
 
+# Create default admin user if not already present
+echo "Creating default superuser if not already present..."
+python3 manage.py shell << END
+from django.contrib.auth import get_user_model
+User = get_user_model()
+if not User.objects.filter(username="admin").exists():
+    User.objects.create_superuser("admin", "admin@example.com", "adminpass123")
+END
+
 # Run the server
 if [[ "$WGER_USE_GUNICORN" == "True" ]];
 then

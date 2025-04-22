@@ -104,5 +104,5 @@ then
     gunicorn wger.wsgi:application --preload --bind 0.0.0.0:8000
 else
     echo "Using django's development server..."
-    python3 manage.py runserver 0.0.0.0:8000
+    python3 manage.py runserver 0.0.0.0:$PORT
 fi

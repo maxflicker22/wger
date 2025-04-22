@@ -101,7 +101,7 @@ END
 if [[ "$WGER_USE_GUNICORN" == "True" ]];
 then
     echo "Using gunicorn..."
-    gunicorn wger.wsgi:application --preload --bind 0.0.0.0:8000
+    gunicorn wger.wsgi:application --preload --bind 0.0.0.0:$PORT
 else
     echo "Using django's development server..."
     python3 manage.py runserver 0.0.0.0:$PORT

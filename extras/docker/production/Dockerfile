@@ -81,7 +81,8 @@ RUN pip3 install --break-system-packages --user -e . \
 
 CMD ["/home/wger/entrypoint.sh"]
 
-COPY entrypoint.sh /entrypoint.sh
+COPY extras/docker/production/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+
 

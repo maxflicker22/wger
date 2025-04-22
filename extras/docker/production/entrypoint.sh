@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "PORT: $PORT"
 # Copy a settings file if nothing's found (e.g. when mounting a fresh checkout)
 # This is a bit ugly, but it's needed since we use this image for development
 # and production.

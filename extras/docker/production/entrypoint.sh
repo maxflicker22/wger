@@ -1,5 +1,11 @@
 #!/bin/bash
 
+set -ex   # <--- zeigt alle Befehle & stoppt bei Fehlern
+
+echo "Start entrypoint.sh"
+echo "PORT: $PORT"
+pwd
+ls -la
 # Wechsel in den Django-Projektordner
 cd /home/wger/src
 echo "Aktuelles Verzeichnis: $(pwd)"

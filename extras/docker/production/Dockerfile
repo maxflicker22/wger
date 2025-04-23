@@ -79,10 +79,10 @@ RUN pip3 install --break-system-packages --user -e . \
     && mkdir ~/beat \
     && mkdir ~/db
 
-#CMD ["/home/wger/entrypoint.sh"]
+CMD ["/home/wger/entrypoint.sh"]
 
 # Verwende dein eigenes Startskript
-ENTRYPOINT ["bash", "extras/docker/production/entrypoint.sh"]
+# ENTRYPOINT ["bash", "extras/docker/production/entrypoint.sh"]
 
 
 

@@ -116,6 +116,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     # Prometheus
     'django_prometheus.middleware.PrometheusBeforeMiddleware',
 

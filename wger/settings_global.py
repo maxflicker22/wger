@@ -188,6 +188,8 @@ TEMPLATES = [
 # Store the user messages in the session
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',

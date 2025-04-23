@@ -14,7 +14,7 @@ pymongo==4.11.3
 # for running the dummy entry generators
 faker==37.1.0
 
-whitenoise
+whitenoise>=6.6.0
 
 # Development packages
 django-extensions~=3.2
